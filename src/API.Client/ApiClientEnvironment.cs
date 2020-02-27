@@ -6,8 +6,6 @@ namespace API.Client
 {
     static class ApiClientEnvironmentUrl
     {
-        public static string Dev => "https://localhost:5000/";
-
         public static string Test => "https://test.myapi.com/";
 
         public static string Beta => "https://beta.myapi.com/";
