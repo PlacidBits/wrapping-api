@@ -23,6 +23,13 @@ namespace API.Client
         ApiEnvironment Environment { get; }
 
         /// <summary>
+        /// Explicitly sets the environment. Used for switching environments at runtime. 
+        /// </summary>
+        /// <param name="environment">The environment you want to target. If using Local, you must also provide the apiBaseAddress</param>
+        /// <param name="apiBaseAddress">The apiBaseAddress. This must be provided when trying to target the Dev environment</param>
+        void SetEnvironment(ApiEnvironment environment, string apiBaseAddress = null);
+
+        /// <summary>
         /// Retrieves health response
         /// </summary>
         Task<HealthCheckResponseDto> CheckHealth(HealthCheckRequestDto dto = null);
